@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz!</title>
+</head>
+<body>
+    <table class="table">
+        <div >
+            <h1>Do You Happy with our website?</h1>
+            <input type="radio" name="ansewr" value="Yes" >Yes
+            <input type="radio"  name="ansewr" value="No" >No
+
+        </div>
+        <div >
+             <h1>Do You Find it useful?</h1>
+            <input type="radio"  name="ansewr2" value="Yes" >Yes
+            <input type="radio"  name="ansewr2" value="No" >No
+
+        </div>
+        <div >
+            <h1>Will you use our website agian...?</h1>
+            <input type="radio"  name="ansewr3" value="Yes" >Yes
+            <input type="radio"  name="ansewr3" value="No" >No
+        </div>
+            <button type="button" onclick="submit()">Submit</button>
+
+    </table>
+     
+
+        <script>
+            let Yes = 0;
+            let No = 0;
+            function submit(){
+                let radio = document.querySelectorAll("input");
+                for(let i=0;i<radio.length;i++)
+                if(radio[i].checked && radio[i].value=="Yes"){
+                    ++Yes;
+                }
+                else if(radio[i].checked && radio[i].value=="No"){
+                    ++No;
+                }
+                alert(`the Answer Yes = ${Yes} the answer no =${No}`)
+            }
+        </script>
+</body>
+</html>
